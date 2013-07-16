@@ -1,4 +1,8 @@
 Applauser::Application.routes.draw do
+  resource :session, only: [:new, :create, :destroy]
+
+  resources :users, only: [:new, :create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
