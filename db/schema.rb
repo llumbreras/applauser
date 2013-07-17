@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130717192129) do
+ActiveRecord::Schema.define(:version => 20130717212006) do
 
   create_table "applauses", :force => true do |t|
     t.integer  "user_id"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(:version => 20130717192129) do
 
   add_index "applauses", ["content_type", "content_id"], :name => "index_applauses_on_content_type_and_content_id"
   add_index "applauses", ["user_id"], :name => "index_applauses_on_user_id"
+
+  create_table "photo_applauses", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "text_applauses", :force => true do |t|
     t.string "body"

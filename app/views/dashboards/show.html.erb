@@ -5,4 +5,9 @@
 	<%= form.submit 'Applause!' %>
 <% end %>
 
+<%= form_for @photo_applause do |form| %>
+	<%= form.file_field :image %>
+	<%= form.submit 'Applause!' %>
+<% end %>
+
 <%= render @applauses %>
