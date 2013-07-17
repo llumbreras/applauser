@@ -1,3 +1,6 @@
 class PhotoApplause < ActiveRecord::Base
-  attr_accessible :image
+
+	has_attached_file :image, styles: {
+		applause: "200x200>"
+	}
 end

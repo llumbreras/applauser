@@ -1,6 +1,8 @@
 <%= div_for applause do %>
 	<%= link_to applause.user.username, applause.user %>
 	applauded
-	<%= render applause.content %>
+	<div>
+		<%= render applause.content %>
+	</div>
 	<%= link_to time_ago_in_words(applause.created_at), applause %>
 <% end %>
