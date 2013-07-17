@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   respond_to :html
 
+  def show
+    @user = User.find(params[:id])
+    @applauses = @user.applauses
+  end
+
   def new
     @user = User.new
   end

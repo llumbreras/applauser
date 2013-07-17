@@ -1,4 +1,8 @@
 class ApplausesController < ApplicationController
+	def show
+		@applause = Applause.find(params[:id])
+	end
+
 	def create
 		applause = current_user.applauses.build(applause_parameter)
 		applause.save
