@@ -1,6 +1,6 @@
 <%= div_for applause do %>
 	<%= link_to applause.user.username, applause.user %>
-	applaud
+	applauded
 	<%= applause.body %>
 	<%= link_to time_ago_in_words(applause.created_at), applause %>
 <% end %>
