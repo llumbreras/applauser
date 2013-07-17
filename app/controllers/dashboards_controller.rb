@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
 	def show
 		@applause = Applause.new
-		@applauses = [ ]
+		@applauses = current_user.applauses
 	end
 end
