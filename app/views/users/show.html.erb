@@ -1,2 +1,3 @@
 <h1><%= @user.username %>'s <%= pluralize(@applauses.length, 'applause') %></h1>
+<%= follow_button @user %>
 <%= render @applauses %>
