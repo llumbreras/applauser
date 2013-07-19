@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130717212006) do
+ActiveRecord::Schema.define(:version => 20130719190855) do
 
   create_table "applauses", :force => true do |t|
     t.integer  "user_id"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(:version => 20130717212006) do
 
   add_index "applauses", ["content_type", "content_id"], :name => "index_applauses_on_content_type_and_content_id"
   add_index "applauses", ["user_id"], :name => "index_applauses_on_user_id"
+
+  create_table "following_relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_user_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "following_relationships", ["followed_user_id"], :name => "index_following_relationships_on_followed_user_id"
+  add_index "following_relationships", ["follower_id"], :name => "index_following_relationships_on_follower_id"
 
   create_table "photo_applauses", :force => true do |t|
     t.string   "image_file_name"
