@@ -11,8 +11,8 @@ class Dashboard
 		PhotoApplause.new
 	end
 
-	def applauses
-		@user.applauses
+	def timeline
+		Timeline.new(@user)
 	end
 
 end
