@@ -1,7 +1,6 @@
 class DashboardsController < ApplicationController
+	
 	def show
-		@text_applause = TextApplause.new
-		@photo_applause = PhotoApplause.new
-		@applauses = current_user.applauses
+		@dashboard = Dashboard.new(current_user)
 	end
 end
