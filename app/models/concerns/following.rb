@@ -2,7 +2,7 @@ module Concerns
 	module Following
 		extend ActiveSupport::Concern
 
-		include do
+		included do
 
 			has_many :followed_user_relationships, 
 				foreign_key: :follower_id,
