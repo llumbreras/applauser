@@ -9,4 +9,5 @@ Applauser::Application.routes.draw do
   resources :applauses, only: [:show]
   resources :text_applauses, only: [:create]
   resources :photo_applauses, only: [:create]
+  resources :hashtags, only: [:show]
   end
