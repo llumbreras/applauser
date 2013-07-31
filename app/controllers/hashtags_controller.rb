@@ -1,9 +1,13 @@
 class HashtagsController < ApplicationController
 
 	def show
-		@hashtag = params[:id]
-		@applauses = Applause.search("##{@hashtag}")
+		@search = Search.new(hashtag)
 	end
 
+	private
+
+	def hashtag
+		"#{params[:id]}"
+	end
 
 end
