@@ -15,3 +15,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
+
