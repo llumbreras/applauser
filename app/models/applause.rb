@@ -8,4 +8,10 @@ class Applause < ActiveRecord::Base
   	where(content_type: 'TextApplause')
   end
 
+  searchable do 
+  	text :content do
+  		content.index
+  	end
+  end
+
 end
